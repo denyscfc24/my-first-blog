@@ -23,10 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(file)))
 SECRET_KEY = 'qgi@nqsk7h!$y7khrd#hfjdl%s37%x#ikg-a#_)qm4o))96=xh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True # змінив True на False
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['denyscfc24.pythonanywhere.com'] # додав 'denyscfc24.pythonanywhere.com'
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -49,12 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-    'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
-] # додав два останніх
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+]
 
 ROOT_URLCONF = 'mysite.urls'
 
